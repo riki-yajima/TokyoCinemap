@@ -1,0 +1,654 @@
+/* 共通 */
+
+body {
+  background-color: #000;
+  position: relative;
+}
+
+
+#main_1 h1,#cinema_post h1,#profile_info h1,#main_content h1,#profile_edit h1,#movie_list h1,#manage h1,#login_1 h1 {
+  width: 15%;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+#review h1,#myreview_movies h1 {
+  width: 30%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#login_1,#main_1,#main_post,#cinema_post,#profile_info,#myreview_movies,#main_content,#review,#profile_edit,#movie_list,.movie_list,#manage {
+  background-color: #000;
+  padding-top: 100px;
+  z-index: 0;
+  position: relative;
+}
+
+#review {
+  padding-top: 20px;
+}
+
+body,h1,h2,h3,p,dl,dd {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,p,a,dt,dd,th,td,div {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,h2,h3 {
+  font-size: 1em;
+}
+
+h4 {
+  margin: 0;
+}
+
+strong {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+select {
+  outline: none;
+}
+
+input {
+  width: 50%;
+  font-size: 1rem;
+  padding: 10px 2.5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  color: white;
+  background-color: darkorange;
+  width: 35%;
+  font-size: 1rem;
+  padding: 10px 2.5px;
+  border-radius: 4px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.favorite_btn {
+  background: url(../img/like.png) center no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  margin: initial;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#filesend {
+  display: none;
+}
+
+.err_message {
+  color: darkorange;
+  font-size: 0.6em;
+}
+
+textarea {
+  outline: none;
+}
+
+/* header.php */
+
+#header_1 {
+  width: 100%;
+  min-height: 150px;
+  background-position: center;
+  background-color: #090000;
+}
+
+header nav {
+  padding: 0 5%;
+  padding-top: 70px;
+}
+
+header nav .g_nav {
+  flex: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 50px;
+}
+
+header nav #logo  {
+  flex: 25%;
+  font-size: 32px;
+}
+
+header nav #logo a {
+  font: bold;
+}
+
+.back {
+  font-size: 0.9rem;
+}
+
+.back li {
+  position: relative;
+  display: inline;
+  padding-left: 18px;
+}
+
+.back li:first-child {
+  padding-left: 0;
+}
+
+.back li:nth-child(2)::before {
+  position: absolute;
+  top: -4px;
+  left: 4px;
+  content: '>';
+}
+.back li:last-child::before {
+  position: absolute;
+  top: -4px;
+  left: 4px;
+  content: '>';
+}
+
+/* login.php */
+
+x-sign {
+  --interval:1s;
+  display: block;
+  text-shadow: 
+  0 0 10px var(--color1),
+  0 0 20px var(--color2),
+  0 0 40px var(--color3),
+  0 0 80px var(--color4);
+  will-change: filter,color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+  color:#00bcd4;
+  --color1:aqua;
+  --color2:skyblue;
+  --color3:dodgerblue;
+  --color4:azure;
+  font-size: 20px;
+  z-index: 1;
+  right: 40px;
+  top: 40%;
+  position: absolute;
+  transform: rotate(20deg);
+  
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+header .menu {
+  padding: 0 10px;
+}
+
+#login_1 {
+  background-color: #000;
+  text-align: center;
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.login_1 {
+  padding-top: 100px;
+}
+
+.login_1 dt,dd {
+  padding: 0.5% 0 1%;
+  font-size: 1.2rem;
+  margin-left: 0;
+}
+
+/* footer */
+
+footer {
+  position: relative;
+}
+
+.bg {
+  background: url(../img/logo1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  animation: flash 5s linear infinite;
+}
+
+@keyframes flash {
+  0%,100% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+}
+
+footer .outer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .reserved {
+  padding-top: 2%;
+}
+
+
+/* .image_bottom {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-image: url(/img/logo1.jpg);
+} */
+
+
+
+/* index.php(トップページ) */
+
+
+#main_1 h3 {
+  text-align: center;
+}
+
+.movie_table {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.movie_table_inner {
+  text-align: center;
+}
+
+.movie_table_inner a {
+  font-size: small;
+}
+
+.content_item {
+  width: 15%;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  height: auto;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px rgb(9 9 9 / 75%);
+  margin: 1%;
+  margin-bottom: 30px;
+  background-color: #a9a9a914;
+  border: 1px solid #363636;
+}
+
+.movie_img img {
+  width: auto;
+  height: 210px;
+  padding: 5px;
+}
+
+.paging {
+  text-align: center;
+  font-family: serif;
+}
+
+.paging a {
+  padding: 0 5px;
+  text-decoration: underline;
+}
+
+/* movie.php */
+
+.content_detail_inner {
+  display: flex;
+  border-top: 1px solid #363636;
+  border-bottom: 1px solid #363636;
+  padding: 10px 0;
+}
+
+.content_detail {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.content_detail_left {
+  width: 30%;
+  height: 400px;
+}
+
+.content_detail_left img {
+  padding-top: 9px;
+  width: auto;
+  height: 380px;
+}
+
+.content_detail_main {
+  width: 70%;
+  padding-left: 40px;
+}
+
+.content_detail_main h2 {
+  font-size: 1.8em;
+  padding-top: 9px;
+}
+
+.content_detail_main h3 {
+  font-size: 0.8em;
+}
+
+.detail_title,.content_detail_info,.content_detail_story {
+  padding-bottom: 30px;
+}
+
+.detail_info_title {
+  display: inline-block;
+}
+
+.detail_info_title:nth-of-type(n+2):before {
+  content: "/";
+  font-weight: 200;
+  padding-right: 7px;
+}
+
+.content_detail_story .loadmovie {
+  padding-top: 50px;
+}
+
+.content_detail_header {
+  padding: 16px 0;
+}
+
+.media {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.media_innner {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 30px 20px 20px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 20px;
+  border: 1px solid #363636;
+  background-color: #a9a9a914;
+}
+
+.review_title_view .review_view {
+  padding-bottom: 10px;
+}
+
+.media_info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+.media_review {
+  margin-bottom: 100px;
+}
+
+.media_review_detail button {
+  margin: 0;
+  width: 20%;
+}
+
+.btn_bookmark {
+  color: white;
+  background-color: darkorange;
+  width: 20%;
+  font-size: 1rem;
+  padding: 8px 2px;
+  border-radius: 50px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+/* review.php */
+
+.review_area {
+  padding-top: 10px;
+}
+
+.review_area textarea {
+  width: 70%;
+  height: 200px;
+  border: none;
+}
+
+.review_area input {
+  width: 70%;
+  padding:10px 0;
+  font-size:0.85em;
+  border-bottom: solid 1px#ebebeb;;
+}
+
+
+/* theater.php */
+
+
+.theater_area {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.theater_area .cinema:nth-child(even) {
+  background-color: #121212;
+}
+
+.cinema {
+  padding: 20px 0;
+}
+
+.cinema_name {
+  font-size: 1.3em;
+}
+
+.cinema_address {
+  font-size: small;
+  padding-top: 5px;
+}
+
+/* theaters_movies.php */
+
+.cinema_2 {
+  background-color: #a9a9a914;
+  border-bottom: solid 2px #000;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+
+
+/* mypage.php */
+
+.profile {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.profile_main {
+  box-shadow: 0 0 2px 2px rgb(9 9 9 / 75%);
+  background-color: #a9a9a914;
+  border: 3px solid #363636;
+  padding: 40px 20px;
+}
+
+.profile_body {
+  display: flex;
+}
+
+.profile_avator {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #363636;
+  border-radius: 50%;
+  background-image: url(/img/avator.png);
+  background-size: cover;
+}
+
+.profile_name {
+  font-size: 1.6rem;
+  padding: 0 30px;
+}
+
+.profile_bottom {
+  width: 200px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+  float: right;
+  background-color: #7e7e7e;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.profile_edit {
+  font-size: small;
+}
+
+.profile_follow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile_follow p {
+  padding-right: 40px;
+}
+
+.content_list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content_card {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 0 0 2px 2px rgb(9 9 9 / 75%);
+  margin-top: 30px;
+  background-color: #a9a9a914;
+  border: 1px solid #363636;
+  position: relative;
+}
+
+.content_card_left {
+  width: 70%;
+}
+
+.content_card_right {
+  border: 1px solid #363636;
+  width: 150px;
+  height: 200px;
+}
+
+.review_edit {
+  position: absolute;
+  bottom: 0;
+  right: 170px;
+  padding-bottom: 10px;
+}
+
+.content_card .reactions {
+  width: 85%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.myreview_movie_title {
+  padding-bottom: 10px;
+}
+
+.myreview_title {
+  padding-bottom: 10px;
+}
+
+.myreview {
+  padding-bottom: 10px;
+}
+
+.mybookmark {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* user_edit.php */
+
+.main_area {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main_area .login_1 {
+  padding-top: 0;
+  border-bottom: 1px solid #363636;
+  border-top: 1px solid #363636;
+}
+
+
+/* movie_list.php */
+
+.movie_list table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.movie_list img {
+  width: auto;
+  height: 100px;
+}
+
+/* manage.php */
+
+.manage_movie {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 200px;
+  font-size: 2rem;
+}
+
+/* upload.php */
+
+#story {
+  width: 50%;
+  font-size: 1rem;
+  padding: 10px 2.5px;
+  border-radius: 4px;
+}
+
